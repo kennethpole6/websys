@@ -1,0 +1,41 @@
+#login{
+    background-color: #1B1B1B;
+    height: 100vh;
+    text-align: center;
+}
+.login-div{
+    margin-top: 10%;
+    height: 80%;
+    border: none;
+    background-color:#292929;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+.login-div h1{
+    color: white;
+}
+.login-div h4{
+    color: white;
+    text-align: left;
+}
+.login-div p{
+    color: white;
+    text-align: left;
+}
+.reg{
+    margin-top: 2%;
+    color: white;
+    width: 40%;
+    background-color: #000000 !important;
+    margin: 2%;
+}
+.log{
+    margin: 2%;
+    width: 40%;
+    margin-top: 2%;
+    color: white;
+    background-color: rgb(255, 121, 32) !important;
+}
