@@ -10,14 +10,13 @@ include 'include/connect.inc.php';
                 <div class="login-div">
                     <form action="include/login.inc.php" method="POST">
                     <h1>Student Information System</h1>
-                    <h4>Login</h4>
-                    <p>Username</p>
-                    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="user">
-                    <p>Password</p>
-                    <input type="password" class="form-control" aria-label="Password" aria-describedby="basic-addon1" name="pass">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" aria-label="Username" id="username" aria-describedby="basic-addon1" name="user">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" aria-label="Password" id="password" aria-describedby="basic-addon1" name="pass">
                     <br>
-                    <a href="register.php"><button type="button" class="btn btn-primary reg">Register</button></a>
-                    <button type="submit" class="btn btn-primary log">Login</button>
+                    <a href="register.php"><button type="button" class="btn btn-primary border-0 reg">Register</button></a>
+                    <button type="submit" class="btn btn-primary border-0 log">Login</button>
                     </form>
                 </div>
             </div>    
