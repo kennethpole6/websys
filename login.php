@@ -16,7 +16,7 @@ include 'include/connect.inc.php';
                     <input type="password" class="form-control" aria-label="Password" id="password" aria-describedby="basic-addon1" name="pass">
                     <br>
                     <a href="register.php"><button type="button" class="btn btn-primary border-0 reg">Register</button></a>
-                    <button type="submit" class="btn btn-primary border-0 log">Login</button>
+                    <button type="submit" name="login_btn" class="btn btn-primary border-0 log">Login</button>
                     </form>
                 </div>
             </div>    
