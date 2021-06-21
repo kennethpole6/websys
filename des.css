@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 body{
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 #login{
@@ -9,7 +9,7 @@ body{
     text-align: center;
 }
 .login-div{
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-top: 10%;
     max-width: 550px;
     border: none;
@@ -78,7 +78,7 @@ body{
 
 
 .register-div {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-top: 10%;
     max-width: 1000px;
     border: none;
@@ -116,4 +116,108 @@ body{
 /* for table */
 .table-tr td, .table-tr th{
 text-align: center !important;
+}
+
+.nav{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1B1B1B;
+    color: white;
+    padding: 1.2rem;
+}
+
+.logo h4{
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.user > *{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top: 1.3rem; */
+}
+
+.user button{
+    background-color: #FFA31A;
+    font-weight: 600;
+    color: white;
+}
+
+.hero{
+    font-family: 'Inter', sans-serif;
+    background-color: #1B1B1B;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.crud button{
+    background-color:#FFA31A ;
+    color: white;
+    padding: 8px;
+    width: 65%;
+}
+
+.student{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.table > *{
+    color: white;
+}
+
+
+.modal{
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-title{
+    font-weight: 600;
+}
+
+.modal-body{
+    display: grid;
+    place-items: center;
+}
+
+.modal-body input{
+    margin: 8px 0;
+    width: 80%;
+}
+
+.modal-body button{
+float: right;
+margin-top: 8px;
+}
+
+.modal-footer button{
+    color: white;
+}
+
+.add button{
+    background-color:#FFA31A ;
+    color: white;
+    font-weight: 600;
+}
+
+.update button{
+    background-color:#FFA31A ;
+    color: white;
+    font-weight: 600;
+}
+
+.update-input{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.delete{
+    background-color:#FFA31A ;
+    color: white;
+    font-weight: 600;
 }

@@ -5,40 +5,47 @@ session_start();
 ?>
 <body>
 <script src="js/script.js"></script>
-    <div class="container">
+    <div class="container-fluid hero">
         <div class="row">
-            <div class="col-lg-4">
-                <h1>Student Information System</h1>
+          <div class="nav">
+          <div class="col-lg-4 logo">
+                <h4>Student Information System</h4>
             </div>
-            <div class="col-lg-3 ms-auto">
+            <div class="col-lg-3 ms-auto user">
                 <form action="include/logout.inc.php" method="POST">
-                    <h1>Welcome, <?php echo $_SESSION["user"];?> </h1>
-                    <span><button type="submit" class="btn btn-primary">Logout</button></span>
+                    <h4>Welcome, <?php echo $_SESSION["user"];?> </h4>
+                    <span><button type="submit" class="btn">Logout</button></span>
                 </form>
             </div>
+          </div>
         </div>
         <br>
+        <br>
+        <br>
+        <br>
         <div class="row">
-            <div class="col-lg-3">
-                <h1>Student List</h1>
+          <div class="student">
+          <div class="col-lg-3">
+                <h3>Student List</h3>
             </div>
-            <div class="col-lg-2 ms-auto">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+            <div class="col-lg-2 ms-auto crud">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
             </div>
-            <div class="col-lg-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update">Update</button>
+            <div class="col-lg-2 crud">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#update">Update</button>
             </div>
-            <div class="col-lg-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+            <div class="col-lg-2 crud">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
             </div>
+          </div>
         </div>
         <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="result">
                     <div class="table-responsive">
-                        <table class="table align-middle table-hover">
-                          <thead>
+                        <table class="table align-middle table-hover table-dark">
+                        <thead>
                             <tr>
                                 <th>Student no.</th>
                                 <th>First Name</th>
@@ -71,14 +78,14 @@ session_start();
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Student record</h5>
+            <h4 class="modal-title" id="exampleModalLabel">Add Student Record</h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
             
-                    <input type="text" placeholder="FirstName" name="fname">
-                    <input type="text" placeholder="LasttName" name="lname">
-                    <input type="text" placeholder="MiddleName" name="mname">
+                    <input type="text" placeholder="First Name" name="fname">
+                    <input type="text" placeholder="Last Name" name="lname">
+                    <input type="text" placeholder="Middle Name" name="mname">
                     <input type="text" placeholder="Section" name="section">
                     <input type="text" placeholder="Course" name="course">
                     <input type="text" placeholder="Major" name="major">
@@ -90,7 +97,9 @@ session_start();
             <div class="modal-footer">
              
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" name="add_btn" onclick="addStudBtn();">Add record</button>
+            <div class="add">
+            <button type="submit" class="btn" name="add_btn" onclick="addStudBtn();">Add record</button>
+            </div>
             </div>
         </div>
         </div>
@@ -109,10 +118,13 @@ session_start();
         </div>
         <div class="modal-body">
             <div id="update-content">
-                <input type="text" placeholder="ID" name="id" id="stud_id"><button type="button" class="btn btn-primary" onclick="find();">Find</button>
-                <input type="text" placeholder="FirstName" name="fname">
-                <input type="text" placeholder="LasttName" name="lname">
-                <input type="text" placeholder="MiddleName" name="mname">
+            <div class="update">
+                  <button type="button" class="btn" onclick="find();">Find</button>
+                </div>
+                <input type="text" placeholder="ID" name="id" id="stud_id">
+                <input type="text" placeholder="First Name" name="fname">
+                <input type="text" placeholder="Last Name" name="lname">
+                <input type="text" placeholder="Middle Name" name="mname">
                 <input type="text" placeholder="Section" name="section">
                 <input type="text" placeholder="Course" name="course">
                 <input type="text" placeholder="Major" name="major">
@@ -124,7 +136,9 @@ session_start();
         <div class="modal-footer">
       
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" name="update_btn" onclick="updateStud();">Update record</button>
+          <div class="update">
+          <button type="submit" class="btn" name="update_btn" onclick="updateStud();">Update record</button>
+          </div>
         </div>
       </div>
     </div>
@@ -141,14 +155,16 @@ session_start();
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div id="update-content">
+            <div id="update-content" class="update-input">
                 <input type="text" placeholder="ID" name="id" id="stud_id">
             </div>
         </div>
         <div class="modal-footer">
       
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-danger" name="delete_btn" onclick="deleteStud();">Delete record</button>
+          <div class="delete">
+          <button type="submit" class="btn" name="delete_btn" onclick="deleteStud();">Delete record</button>
+          </div>
         </div>
       </div>
     </div>
