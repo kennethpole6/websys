@@ -112,3 +112,8 @@ body{
 .right button:hover{
     background-color: rgb(247, 134, 59) !important
 }
+
+/* for table */
+.table-tr td, .table-tr th{
+text-align: center !important;
+}

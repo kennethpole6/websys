@@ -1,8 +1,9 @@
 <?php
 include "connect.inc.php";
 
-if(isset($_POST["add_btn"]))
+if(isset($_POST["update_btn"]))
 {
+    $id=$_POST["id"];
     $fname=$_POST["fname"];
     $lname=$_POST["lname"];
     $mname=$_POST["mname"];
@@ -12,7 +13,7 @@ if(isset($_POST["add_btn"]))
     $type=$_POST["type"];
     $status=$_POST["status"];
     $scholar=$_POST["scholar"];
-    $sql="INSERT INTO students(fname,lname,middle_name,section,course,major,type_irg,stud_status,scholar_type) values ('".$fname."','".$lname."','".$mname."','".$section."','".$course."','".$major."','".$type."','".$status."','".$scholar."')";
+    $sql="UPDATE students set fname='".$fname."',lname='".$lname."',middle_name='".$mname."',section='".$section."',course='".$course."',major='".$major."',type_irg='".$type."',stud_status='".$status."',scholar_type='".$scholar."' where id = '".$id."'";
     $result = mysqli_query($conn,$sql);
     
   header("location:../index.php");
