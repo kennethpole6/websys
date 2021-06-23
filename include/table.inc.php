@@ -7,16 +7,16 @@ if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
         echo '
         <tr class="table-tr">
-        <th>'.$row["id"].'</th>
-        <td>'.$row["fname"].'</td>
-        <td>'.$row["lname"].'</td>
-        <td>'.$row["middle_name"].'</td>
-        <td>'.$row["section"].'</td>
-        <td>'.$row["course"].'</td>
-        <td>'.$row["major"].'</td>
-        <td>'.$row["type_irg"].'</td>
-        <td>'.$row["stud_status"].'</td>
-        <td>'.$row["scholar_type"].'</td>
+        <th data-label="Student no:">'.$row["id"].'</th>
+        <td data-label="First name:">'.$row["fname"].'</td>
+        <td data-label="Last name:">'.$row["lname"].'</td>
+        <td data-label="Middle name">'.$row["middle_name"].'</td>
+        <td data-label="Section:">'.$row["section"].'</td>
+        <td data-label="Course:">'.$row["course"].'</td>
+        <td data-label="Major:">'.$row["major"].'</td>
+        <td data-label="Type:">'.$row["type_irg"].'</td>
+        <td data-label="Student status:">'.$row["stud_status"].'</td>
+        <td data-label="Type of Scholar:">'.$row["scholar_type"].'</td>
         </tr>';
     }
 }

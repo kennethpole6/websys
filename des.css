@@ -221,3 +221,56 @@ margin-top: 8px;
     color: white;
     font-weight: 600;
 }
+
+
+/*-----For responsiveness--------*/
+@media (max-width: 990px) {
+    .body{
+        height: 2000px;
+    }
+    .logo h4{
+        display: none;
+    }
+
+    .student h3{
+        display: none;
+    }
+
+    .crud button{
+        background-color:#FFA31A ;
+        color: white;
+        padding: 10px;
+        width: 95%;
+        height: 45px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .table thead, .table tr th {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+    }
+    .table-tr td{
+        text-align: right;
+        height: 40px;
+        font-size: 18px;
+    }
+    .table-tr td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0%;
+        width:50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: left;
+    }
+}
+

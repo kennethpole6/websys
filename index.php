@@ -25,17 +25,28 @@ session_start();
         <br>
         <div class="row">
           <div class="student">
+        <div class="col-lg-3 student">
+                <h3>Student List</h3>
+            </div>
+            <div class="col-lg-2 ms-auto crud">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="add">Add</button>
+
           <div class="col-lg-3">
                 <h3>Student List</h3>
             </div>
             <div class="col-lg-2 ms-auto crud">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+
             </div>
             <div class="col-lg-2 crud">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#update">Update</button>
             </div>
             <div class="col-lg-2 crud">
+
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#delete" id="del">Delete</button>
+
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+
             </div>
           </div>
         </div>
@@ -59,7 +70,7 @@ session_start();
                                 <th>Type of Scholar</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="tbody">
                             <?php include "include/table.inc.php";?>
                           </tbody>
                         </table>
