@@ -117,3 +117,9 @@ body{
 .table-tr td, .table-tr th{
 text-align: center !important;
 }
+
+@media (max-width: 768px){
+    .table thead{
+        display: none;
+    }
+}
