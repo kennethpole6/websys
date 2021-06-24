@@ -222,7 +222,6 @@ margin-top: 8px;
     font-weight: 600;
 }
 
-
 /*-----For responsiveness--------*/
 @media (max-width: 990px) {
     .body{
@@ -273,4 +272,3 @@ margin-top: 8px;
         text-align: left;
     }
 }
-
